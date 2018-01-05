@@ -47,7 +47,6 @@ class SongsController < ApplicationController
   private
 
   def song_params
-    #params[:song][:genre] = Genre.find_by(id: params[:song][:genre])
-    params.require(:song).permit(:title, :artist_name, :genre)
+    params.require(:song).permit(:title, :artist_name, :genre_id)
   end
 end
