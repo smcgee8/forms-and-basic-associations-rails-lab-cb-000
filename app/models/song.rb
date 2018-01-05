@@ -8,7 +8,9 @@ class Song < ActiveRecord::Base
   end
 
   def artist_name
-    self.artist.name rescue nil
+    if self.artist
+      self.artist.name
+    end
   end
 
 end
